@@ -19,19 +19,22 @@ public class CalculatorEngine {
 	void multiply(){
 		binaryOperation('*');
 	}
-	void divide(){
+	void divide() {
 		binaryOperation('/');
 	}
 	
-	void compute(){
+	void compute() throws DivideByZeroError {
 		if (toDo == '+')
 			value+=keep;
 		else if (toDo == '-')
 			value=keep-value;
 		else if (toDo == '*')
 			value*=keep;
-		else if (toDo == '/')
-			value=keep/value;
+		else if (toDo == '/'){
+			if(value==0)
+				throw new DivideByZeroError();
+			value=keep/value;		
+		}
 		keep = 0;
 	}
 	

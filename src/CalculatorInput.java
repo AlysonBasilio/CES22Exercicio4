@@ -23,7 +23,11 @@ public class CalculatorInput {
 					else if(c == '*') engine.multiply();
 					else if(c == '/') engine.divide();
 					else if(c >= '0' && c<= '9') engine.digit(c - '0');
-					else if(c == '=') engine.compute();
+					else if(c == '=') try{
+						engine.compute();
+					} catch(DivideByZeroError e){
+						System.out.println("Erro: Divisão por zero.");
+					}
 					else if(c == 'c' || c == 'C') engine.clear();
 				}
 			}
