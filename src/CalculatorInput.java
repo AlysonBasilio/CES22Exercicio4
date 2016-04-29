@@ -34,9 +34,9 @@ public class CalculatorInput {
 		}
 	}
 	
-	public static void main(String[] args) throws Exception {
+	/*public static void main(String[] args) throws Exception {
 		CalculatorEngine e = new CalculatorEngine();
 		CalculatorInput x = new CalculatorInput(e);
 		x.run();
-	}
+	}*/
 }
